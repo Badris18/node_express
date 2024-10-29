@@ -12,6 +12,8 @@ async function seedCategories() {
         const categories = [];
         for (let i = 0; i < 20; i++) {
             categories.push({
+
+                
                 name: faker.commerce.department(),  // Generates a random category name
             });
         }
