@@ -25,7 +25,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/brands', brandRoutes);
 
 const PORT = process.env.PORT || 5000;
-const HOST = process.env.HOST || '0.0.0.0';
+const HOST = process.env.HOST || '192.168.0.108';
 
 // Start the server
 const server = app.listen(PORT, () => {
