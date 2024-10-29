@@ -1,6 +1,6 @@
 const Brand = require('../../models/Brand');
 
-exports.getAllBrands = async (res, req)=>{
+exports.getAllBrands = async (req, res)=>{
 
     try{
 
