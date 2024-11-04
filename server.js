@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 // Import routes
 const categoryRoutes = require('./routes/api/v2/CategoryRouter');
 const brandRoutes = require('./routes/api/v2/BrandRouter');
+const productRoutes = require('./routes/api/v2/ProductRouter');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 // Routes 
 app.use('/api/categories', categoryRoutes);
 app.use('/api/brands', brandRoutes);
+app.use('/api/products', productRoutes);
 
 const PORT = process.env.PORT || 5000;
 const HOST = process.env.HOST || '192.168.0.108';
