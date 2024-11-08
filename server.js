@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 const categoryRoutes = require('./routes/api/v2/CategoryRouter');
 const brandRoutes = require('./routes/api/v2/BrandRouter');
 const productRoutes = require('./routes/api/v2/ProductRouter');
+const subcategoryRoutes = require('./routes/api/v2/SubCategoryRouter');
 
 const app = express();
 
@@ -25,9 +26,10 @@ app.get('/', (req, res) => {
 app.use('/api/categories', categoryRoutes);
 app.use('/api/brands', brandRoutes);
 app.use('/api/products', productRoutes);
+app.use('/api/subcategories', subcategoryRoutes);
 
 const PORT = process.env.PORT || 5000;
-const HOST = process.env.HOST || '192.168.0.108';
+const HOST = process.env.HOST || '192.168.0.101';
 
 // Start the server
 const server = app.listen(PORT, () => {
